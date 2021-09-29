@@ -2,7 +2,15 @@
 
 $nombre = $_GET["nombre"];
 
-$prefijo = $_GET["prefijo"];
+$prefijo = $_GET["prefijo"] ?? "";
+
+$prefijoEncontrado = false;
+
+$prefijoEncontrado = strripos($nombre, $prefijo);
+
+if($prefijoEncontrado == 0){
+    
+}
 
 $nombre = trim($nombre, "/");
 
@@ -15,5 +23,7 @@ echo "El nombre en mayúsculas: " .strtoupper($nombre)."<br>";
 echo "El nombre en mayúsculas: " .strtolower($nombre)."<br>";
 
 echo $prefijo;
+
+echo $prefijoEncontrado;
 
 ?>
