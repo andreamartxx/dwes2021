@@ -6,10 +6,19 @@ $prefijo = $_GET["prefijo"] ?? "";
 
 $prefijoEncontrado = false;
 
-$prefijoEncontrado = strripos($nombre, $prefijo);
+$prefijoEncontrado = stripos($nombre, $prefijo);
 
-if($prefijoEncontrado == 0){
-    
+if($prefijo !=null){
+
+    if($prefijoEncontrado === 0){
+
+        echo "El prefijo coincide con el nombre <br>";
+
+    }else{
+
+        echo "El prefijo no coincide con el nombre <br>";
+
+    }
 }
 
 $nombre = trim($nombre, "/");
