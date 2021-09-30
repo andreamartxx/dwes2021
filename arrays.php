@@ -9,7 +9,7 @@
         "nombre3" => "Maria"
     ];    
 
-    print_r($nombres);
+    // print_r($nombres);
 
 //Ejercicio2, contar elementos array
 
@@ -19,7 +19,7 @@
 
  $cadena_nombres = implode(", " , $nombres);
 
-  echo "El array contiene los nombres ".$cadena_nombres;
+  echo "El array contiene los nombres ".$cadena_nombres."<br>";
 
 //Ejercicio4, array ordenado alfabeticamente PREGUNTAR
 
@@ -34,19 +34,13 @@
 
 //Ejercicio5, array en orden inverso PREGUNTAR
 
-    $inverso = array_reverse($nombres, false); 
+    $inverso = array_reverse($nombres, true);
 
-//preguntar
-
-  echo "Array inverso: <br>";
-
-    print_r($inverso);
+    print_r($inverso)."<br>";
 
 //Ejericio6, muestra posición nombre Andrea PREGUNTAR
 
-    $posicion = array_search("Andrea",$nombres);
-
-    echo "La posición del nombre Andrea es ".$posicion;
+    echo "La posición del nombre Andrea es ".array_search("Andrea",$nombres)."<br>";
 
 //Ejercicio7, array alumnos, cada elemento contiene otro array
 
@@ -73,11 +67,11 @@ $alumnos = [
         )
     ];
 
-    print_r($alumnos);
+//    print_r($alumnos);
 
 //Ejercicio8, tabla HTML
 
-    $tabla = '<table border="2">';
+    /* $tabla = '<table border="2">';
     foreach($alumnos as $columna){
         $tabla.='<tr>';
         foreach($tabla as $fila){
@@ -87,17 +81,18 @@ $alumnos = [
     }
     $tabla.='</table>';
 
-    echo $tabla;
+    echo $tabla; */
 
 //Ejercicio9, array indexado solo sacando el nombre
 
     $indexado = array_column($alumnos, 'nombre');
 
-    print_r($indexado);
+    print_r($indexado)."<br>";
 
 //Ejercicio10,  array numeros y suma total
 
 $numeros = [3, 45, 78, 43, 2, 32, 56, 123, 8, 95];
 
 echo "La suma de los 10 números es ".array_sum($numeros);
+
 ?>
