@@ -4,8 +4,6 @@ $nombre = $_GET["nombre"];
 
 $prefijo = $_GET["prefijo"] ?? "";
 
-$prefijoEncontrado = false;
-
 $prefijoEncontrado = stripos($nombre, $prefijo);
 
 if($prefijo !=null){
@@ -31,8 +29,27 @@ echo "El nombre en mayúsculas: " .strtoupper($nombre)."<br>";
 
 echo "El nombre en mayúsculas: " .strtolower($nombre)."<br>";
 
+echo "La letra 'a' aparece: " .strtoupper(substr_count($nombre, 'a')) ." veces <br >";
+
+echo "El nombre después de la modificación: " .str_ireplace("o", "0", "nombre") ."<br>" ?? "No hay ninguna o en el nombre <br >";
+
 echo $prefijo;
 
 echo $prefijoEncontrado;
+
+//URL
+
+$url = 'http://username:password@hostname:9090/path?arg=value';
+
+echo "Protocolo utilizado: " .parse_url($url, PHP_URL_SCHEME)."<br>";
+
+echo "Username de la URL: " .parse_url($url, PHP_URL_USER)."<br>";
+
+echo "Path de la URL: " .parse_url($url, PHP_URL_PATH)."<br>";
+
+echo "QueryString de la URL: " .parse_url($url, PHP_URL_QUERY)."<br>";
+
+
+
 
 ?>
