@@ -121,7 +121,7 @@ echo "<br>";
 
 //Ejercicio9, array indexado solo sacando el nombre
 
-    echo "<h3>Array indexado</h3>";
+    echo "<h3>Array indexado solo con el nombre</h3>";
 
     $indexado = array_column($alumnos, 'nombre');
 
