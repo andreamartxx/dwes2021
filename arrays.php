@@ -59,25 +59,26 @@ echo "<br>";
 
 
 
-    echo"<h3>Array Asociativo</h3>";
+    echo"<h3>Array de Array Asociativo</h3>";
 
 //Ejercicio7, array alumnos, cada elemento contiene otro array
 
     $alumnos = [
-                ["nombre" => "Andrea",
+                [
                 "id" => 1,
+                "nombre" => "Andrea",
                 "edad" => "23"]
             ,
-                ["nombre" => "Saúl",
-                "id" => 2,
+                ["id" => 2,
+                "nombre" => "Saúl",
                 "edad" => "20"]
             ,
-                ["nombre" => "Carlos",
-                "id" => 3,
+                ["id" => 3,
+                "nombre" => "Carlos",
                 "edad" => "33"]
             ,
-                ["nombre" => "Maria",
-                "id" => 4,
+                ["id" => 4,
+                "nombre" => "Maria",
                 "edad" => "22"]
     ];
 
@@ -89,17 +90,34 @@ echo "<br>";
 
     echo "<h3>Tabla</h3>";
 
-     echo '<table border="2">';
-    foreach($alumnos as $columna){
-        echo '<tr>';
-            print_r($columna);
-        foreach($alumnos as $fila){
-            echo'<td>'.print_r($fila).'</td>';
-        }
-        echo '</tr>';
-    }
-    echo '</table>';
+     $tabla = '<table border="2">';
 
+     $contador = 0;
+
+     foreach($alumnos as $campo){
+        $tabla .= '<tr>';
+        foreach($campo as $columna => $fila){
+            $tabla .= '<td>'.$columna.'</td>';
+            $contador++;
+        }
+
+        $tabla .= '</tr>';
+
+        if($contador !=0){
+            break;
+        }
+    }
+
+    foreach($alumnos as $columna){
+        $tabla .= '<tr>';
+        foreach($columna as $fila){
+            $tabla .= '<td>'.$fila.'</td>';
+        }
+            $tabla .= '</tr>';
+    }
+        $tabla .= '</table>';
+
+    echo $tabla;
 
 //Ejercicio9, array indexado solo sacando el nombre
 
