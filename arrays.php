@@ -29,9 +29,9 @@ echo "<br>";
 
 //Ejercicio3, cadena de nombres
 
- $cadena_nombres = implode(" " , $nombres);
+    $cadena_nombres = implode(" " , $nombres);
 
-    echo "El array contiene los nombres ".$cadena_nombres."<br>";
+        echo "El array contiene los nombres ".$cadena_nombres."<br>";
 
 //Ejercicio4, array ordenado alfabeticamente
 
@@ -59,45 +59,46 @@ echo "<br>";
 
 
 
-echo"<h3>Array alumnos</h3>";
+    echo"<h3>Array Asociativo</h3>";
 
 //Ejercicio7, array alumnos, cada elemento contiene otro array
 
-$alumnos = [
-            ["nombre" => "Andrea",
-            "id" => 1,
-            "edad" => "23"]
-        ,
-            ["nombre" => "Saúl",
-            "id" => 2,
-            "edad" => "20"]
-        ,
-            ["nombre" => "Carlos",
-            "id" => 3,
-            "edad" => "33"]
-        ,
-            ["nombre" => "Maria",
-            "id" => 4,
-            "edad" => "22"]
-];
+    $alumnos = [
+                ["nombre" => "Andrea",
+                "id" => 1,
+                "edad" => "23"]
+            ,
+                ["nombre" => "Saúl",
+                "id" => 2,
+                "edad" => "20"]
+            ,
+                ["nombre" => "Carlos",
+                "id" => 3,
+                "edad" => "33"]
+            ,
+                ["nombre" => "Maria",
+                "id" => 4,
+                "edad" => "22"]
+    ];
 
-    print_r($alumnos);
+        print_r($alumnos);
 
-    echo "<br>";
+        echo "<br>";
 
 //Ejercicio8, tabla HTML
 
-/*     $tabla = '<table border="2">';
-    foreach($alumnos as $columna){
-        $tabla.='<tr>';
-        foreach($tabla as $fila){
-            $tabla.= '<td>'.$fila.'</td>';
-        }
-        $tabla.='</tr>';
-    }
-    $tabla.='</table>';
+    echo "<h3>Tabla</h3>";
 
-    echo $tabla; */
+     echo '<table border="2">';
+    foreach($alumnos as $columna => $value){
+        echo '<tr>';
+        foreach($alumnos as $fila => $value){
+            echo'<td>'.$fila.'</td>';
+        }
+        echo '</tr>';
+    }
+    echo '</table>';
+
 
 //Ejercicio9, array indexado solo sacando el nombre
 
@@ -111,13 +112,14 @@ $alumnos = [
 
 //Ejercicio10,  array numeros y suma total
 
-echo "<h3>Array suma números</h3>";
+    echo "<h3>Array suma números</h3>";
 
-$numeros = [3, 45, 78, 43, 2, 32, 56, 123, 8, 95];
+    $numeros = [3, 45, 78, 43, 2, 32, 56, 123, 8, 95];
 
-print_r($numeros);
+    print_r($numeros);
 
-echo "<br>";
+    echo "<br>";
 
-echo "La suma de los 10 números es ".array_sum($numeros);
+    echo "La suma de los 10 números es ".array_sum($numeros);
+
 ?>
