@@ -90,10 +90,11 @@ echo "<br>";
     echo "<h3>Tabla</h3>";
 
      echo '<table border="2">';
-    foreach($alumnos as $columna => $value){
+    foreach($alumnos as $columna){
         echo '<tr>';
-        foreach($alumnos as $fila => $value){
-            echo'<td>'.$fila.'</td>';
+            print_r($columna);
+        foreach($alumnos as $fila){
+            echo'<td>'.print_r($fila).'</td>';
         }
         echo '</tr>';
     }
