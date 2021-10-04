@@ -125,38 +125,6 @@
 
     //ejercicio4
 
-        $operacion = 0;
-
-        $num1 = 0;
-
-        $num2 = 0;
-        
-        function resultadoOperacion($operacion, $num1, $num2){
-
-            echo "$num1 $operacion $num1 = $resultado;
-
-        }
-
-        $suma = function($num1, $num2){
-            return $num1 + $num2;
-        };
-
-        $resta = function($num1, $num2){
-            return $num1 - $num2;
-        };
-
-        $multi = function($num1, $num2){
-            return $num1 * $num2;
-        };
-
-        $div = function($num1, $num2){
-            return $num1 / $num2;
-        };
-
-        echo resultadoOperacion($operacion, $num1, $num2);
-
-//solución victor
-
 
       $operando1 = 0;
 
