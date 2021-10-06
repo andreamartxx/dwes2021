@@ -8,49 +8,21 @@
     
     sort($array);
 
-    $tempMin = " ";
+    $tempfria = $array;
 
-    $contador = 0;
-
-        foreach($array as $valor){
-
-            $tempMin .= $valor. ", ";
-
-            $contador++;
-
-            if($contador == 5){
-
-                break;
-
-            }
-
-        }
-    
-    $tempMin = substr($tempMin, 0, -2);
-
-    echo $tempMin;
+    print_r(array_slice($tempfria, 0, 5));
 
     echo "<h4>Las 5 temperaturas más cálidas</h4>";
     
     rsort($array);
 
-    $tempMax = " ";
+    $tempcalida = $array;
 
-        foreach($array as $valor){
+    print_r(array_slice($tempcalida, 0, 5));
 
-            $tempMax .= $valor. ", ";
+    echo "<h4>La media de las temperaturas</h4>";
 
-            $contador--;
+    $media = array_sum($array)/count($array);
 
-            if($contador == 0){
-
-                break;
-
-            }
-
-        }
-    
-    $tempMax = substr($tempMax, 0, -2);
-
-    echo $tempMax;
+    echo $media;
 ?>
