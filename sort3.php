@@ -6,15 +6,15 @@
 
     function comparacion ($a, $b){ //compara valores del array
 
-        if($a == $b){
+        if(strlen($a) == strlen($b)){
 
             return 0;
         }
-        return ($a < $b) ? -1:1;
+        return (strlen($a) < strlen($b)) ? -1:1;
     }
     
-    strlen(uasort($array, 'comparacion')); //callable
+    uasort($array, 'comparacion'); //callable
 
     print_r($array);
-    
+
 ?>
