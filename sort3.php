@@ -4,7 +4,7 @@
 
     $array = ["Andrea" => "Martín", "Saúl" => "Pacheco", "Carlos" => "Ramos", "Aaron" => "Ruíz"];
 
-    echo mb_strlen('Ruíz');
+    echo mb_strlen('Ruíz'); //acentos
 
     function comparacion ($a, $b){ //compara valores del array
 
