@@ -23,8 +23,9 @@
     $filtrados = array_filter($contactos,
     
         function($contacto) use ($filtrarPor){
-
-            return strpos(strtolower($contacto["email"]), $filtrarPor) !== FALSE;
+            //strpos, primera posicion de un substring en un string; strrpos, posicion ultima aparicion de un substring en un string
+            //si ponemos strpos deberiamos filtrar por nombre
+            return strrpos(strtolower($contacto["email"]), $filtrarPor) !== FALSE;
         });
 
     print_r($filtrados);
