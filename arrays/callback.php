@@ -4,7 +4,7 @@
 
     echo "<h5>Longitud máxima y mínima cadena de arrays</h5>";
 
-    $array = ["largo", "muy largo", "normal", "casi largo"];
+    $array = ["cerca", "muy cerca", "muy muy cerca", "casi cerca"];
 
     function calcularLongitud ($valor){
 
