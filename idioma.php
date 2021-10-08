@@ -4,7 +4,7 @@
 
     if ($language == ""){
 
-       $language = $_COOKIE ["language"] ?? "es";
+       $language = $_COOKIE ["language"] ?? "es"; //asigna valor a la cookie
 
     }
 
